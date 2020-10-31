@@ -56,15 +56,39 @@
 		B97C5E4E254DDCD90077327E /* GetStorm */ = {
 			isa = PBXGroup;
 			children = (
-				B97C5E4F254DDCD90077327E /* AppDelegate.swift */,
-				B97C5E51254DDCD90077327E /* SceneDelegate.swift */,
-				B97C5E53254DDCD90077327E /* ViewController.swift */,
-				B97C5E55254DDCD90077327E /* Main.storyboard */,
+				B97C5E64254DDDC40077327E /* Supporting Files */,
+				B97C5E66254DDDE00077327E /* Controller */,
+				B97C5E68254DDDF40077327E /* View */,
 				B97C5E58254DDCD90077327E /* Assets.xcassets */,
-				B97C5E5A254DDCD90077327E /* LaunchScreen.storyboard */,
 				B97C5E5D254DDCD90077327E /* Info.plist */,
 			);
 			path = GetStorm;
+			sourceTree = "<group>";
+		};
+		B97C5E64254DDDC40077327E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B97C5E4F254DDCD90077327E /* AppDelegate.swift */,
+				B97C5E51254DDCD90077327E /* SceneDelegate.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B97C5E66254DDDE00077327E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B97C5E53254DDCD90077327E /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B97C5E68254DDDF40077327E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B97C5E55254DDCD90077327E /* Main.storyboard */,
+				B97C5E5A254DDCD90077327E /* LaunchScreen.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
