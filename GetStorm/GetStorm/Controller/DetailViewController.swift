@@ -13,11 +13,19 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Detail Storm View"
         if let image = imageSelected {
             detailImageView.image = UIImage(named: image)
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.hidesBarsOnTap = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        navigationController?.hidesBarsOnTap = false
+    }
 
     /*
     // MARK: - Navigation

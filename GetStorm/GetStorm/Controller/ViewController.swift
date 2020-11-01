@@ -13,6 +13,7 @@ class ViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.title = "GetStorm"
         let fileManager = FileManager.default
         let projectPath = Bundle.main.resourcePath!
         do {
