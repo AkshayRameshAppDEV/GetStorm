@@ -38,7 +38,11 @@ class ViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return stormPicsArray.count
     }
-
-
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detailViewController = storyboard?.instantiateViewController(withIdentifier: "DetailView") as! DetailViewController
+        detailViewController.imageSelected = stormPicsArray[indexPath.row]
+        navigationController?.pushViewController(detailViewController, animated: true)
+    }
 }
 
