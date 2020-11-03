@@ -24,6 +24,7 @@ class ViewController: UITableViewController {
                     stormPicsArray.append(content)
                 }
             }
+            stormPicsArray.sort()
         } catch {
             print(error)
         }
@@ -33,6 +34,7 @@ class ViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ImageTextCell", for: indexPath)
         cell.textLabel?.text = stormPicsArray[indexPath.row]
+        cell.textLabel?.font = UIFont.systemFont(ofSize: 24)
         return cell
     }
     
@@ -43,6 +45,8 @@ class ViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let detailViewController = storyboard?.instantiateViewController(withIdentifier: "DetailView") as! DetailViewController
         detailViewController.imageSelected = stormPicsArray[indexPath.row]
+        detailViewController.selectedImageNumber = indexPath.row + 1
+        detailViewController.totalNumberOfImages = stormPicsArray.count
         navigationController?.pushViewController(detailViewController, animated: true)
     }
 }

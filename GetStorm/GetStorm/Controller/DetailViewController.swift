@@ -10,10 +10,15 @@ import UIKit
 class DetailViewController: UIViewController {
     @IBOutlet weak var detailImageView: UIImageView!
     var imageSelected: String?
+    var totalNumberOfImages: Int?
+    var selectedImageNumber: Int?
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Detail Storm View"
+        let imageCount = totalNumberOfImages ?? 0
+        let currentImageNumber = selectedImageNumber ?? 0
+        self.title = "\(currentImageNumber) of \(imageCount)"
         if let image = imageSelected {
             detailImageView.image = UIImage(named: image)
         }
