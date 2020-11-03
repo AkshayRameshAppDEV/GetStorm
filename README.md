@@ -20,3 +20,6 @@
 
 ### Day 17
 <img src="https://github.com/AkshayRameshAppDEV/GetStorm/blob/main/Gif/Day17.gif" alt="Bin2Dec Application Running" width="250" height="500">
+
+### Day 18
+<img src="https://github.com/AkshayRameshAppDEV/GetStorm/blob/main/Gif/Day18.gif" alt="Bin2Dec Application Running" width="250" height="500">
