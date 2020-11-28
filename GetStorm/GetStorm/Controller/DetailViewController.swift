@@ -16,11 +16,19 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(actionTapButton))
         let imageCount = totalNumberOfImages ?? 0
         let currentImageNumber = selectedImageNumber ?? 0
         self.title = "\(currentImageNumber) of \(imageCount)"
         if let image = imageSelected {
             detailImageView.image = UIImage(named: image)
+        }
+    }
+    
+    @objc func actionTapButton() {
+        if let image = imageSelected {
+            let actionVC = UIActivityViewController(activityItems: [image], applicationActivities: nil)
+            present(actionVC, animated: true, completion: nil)
         }
     }
     
